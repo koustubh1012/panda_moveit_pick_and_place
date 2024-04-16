@@ -8,6 +8,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(control_msgs REQUIRED)
+# find_package(rclcpp_action REQUIRED)
 
 add_executable(pick_and_place src/pick_and_place.cpp)
 target_include_directories(pick_and_place PUBLIC
@@ -18,6 +20,8 @@ ament_target_dependencies(
   pick_and_place
   "moveit_ros_planning_interface"
   "rclcpp"
+  "control_msgs"
+  # "rclcpp_actions"
 )
 
 install(TARGETS pick_and_place
