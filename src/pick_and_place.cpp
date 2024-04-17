@@ -107,6 +107,12 @@ int main(int argc, char * argv[])
     RCLCPP_ERROR(logger, "Planing failed!");
   }
     RCLCPP_INFO(logger, "Moved to Home Position");
+  goal_msg.command.position = 0.0; // Example position
+  goal_msg.command.max_effort = 0.0; // Example max effort
+  goal_handle_future = action_client->async_send_goal(goal_msg);
+    // Wait for the result
+  rclcpp::spin_until_future_complete(node, goal_handle_future);
+  RCLCPP_INFO(logger, "Gripper CLOSED!");
 
 
   // Shutdown ROS
