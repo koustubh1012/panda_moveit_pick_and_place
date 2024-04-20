@@ -83,7 +83,7 @@ int main(int argc, char * argv[])
   RCLCPP_INFO(logger, "Moved to Place Position");
 
 
-  //'''Code to open and close the gripper'''
+  //'''Code to open the gripper'''
   goal_msg.command.position = 0.05; // Example position
   goal_msg.command.max_effort = 0.0; // Example max effort
   goal_handle_future = action_client->async_send_goal(goal_msg);
