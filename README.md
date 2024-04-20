@@ -23,6 +23,9 @@ This ROS2 package provides moveit functionalities for Panda robot.
     ```
     $ ros2 run package_120273766 pick_and_place
     ```
+## Demonstration Video
+1. Using Moveit Setup Assistant: https://www.youtube.com/watch?v=BxzRRRp7swI
+2. Pick and place demo: https://youtu.be/CgjW9WizstE
        
 ## Troubleshooting
 - Ensure all dependencies are correctly installed.
